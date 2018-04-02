@@ -18,15 +18,15 @@ def about_project():
 
 @app.route("/members")
 def members():
-	render_template("members.html")
+	return render_template("members.html")
 
-@app.route("/contacts"):
+@app.route("/contacts")
 def contacts():
-	render_template("contacts.html")
+	return render_template("contacts.html")
 
 @app.route("/other_projects")
 def projects():
-	render_template("other_projects.html")
+	return render_template("other_projects.html")
 
 # раздел "Лермонтов"
 @app.route("/author")
@@ -34,13 +34,43 @@ def author():
 	return render_template("author.html")
 
 @app.route("/novel")
-def author():
+def novel():
 	return render_template("novel.html")
 
 @app.route("/lermontov_language")
-def author():
+def lermontov_language():
 	return render_template("lermontov_language.html")
 
+# раздел "Комментарий"
+@app.route("/comments_history")
+def comments_history():
+	return render_template("comments_historic.html")
+
+@app.route("/comments_ling")
+def comments_ling():
+	return render_template("comments_linguistic.html")
+
+# раздел "Интерактив"
+@app.route("/films")
+def films():
+	return render_template("films.html")
+
+@app.route("/maps")
+def maps():
+	return render_template("maps.html")
+
+@app.route("/texts")
+def texts():
+	return render_template("texts.html")
+
+# раздел "Литература"
+@app.route("/publications")
+def publications():
+	return render_template("publications.html")
+
+@app.route("/monographies")
+def monographies():
+	return render_template("monographies.html")
 
 if __name__ == '__main__':
 	app.run()
